@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Гостиница</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>AKIBA PLAZA</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Проживающие" onclick="slowScroll('#main')">Проживающие</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Сотрудники гостиницы">Сотрудники гостиницы</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Номера">Номера</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Брони">Брони</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Записи об уборке">Записи об уборке</a>
+      <a href="#" onclick="document.location='autorisation.php'" title="Зарагестрироваться">Зарагестрироваться</a>
+    </div>
+  </header>
+  <div id="top">
+    <h1>Akihabara Plaza</h1>
+    <h3>Лучший отель в Японии!</h3>
+  </div>
+  <section>
+    <div id="overview">
+      <h2>Каталог</h2>
+        <div class="titel">
+          <img src="https://avatars.mds.yandex.net/get-altay/3629247/2a000001764cb5021e6b986101e599dd4c86/XXL" width="400" height="400" alt="Product 1">
+          <div>
+                <h2>Люкс</h2>
+                <span>Отвественный сотрутдник: Хитори </span>
+                <span>Описание:
+						Студия обустроена всем для Вашего отдыха: телевизор, постельное белье, бесплатный Wi-Fi.Полноценная кухня со всем необходимым. Холодильник. Чайник. Стиральная машинка со стиральным порошком.
+                      Бесплатный завтрак.</span>
+                <span>Стоимость за сутки: 7200 &#x20bd;</span>
+                <div id="mess_send" class="btn">Посмотреть</div>
+          </div>
+        </div>
+        <div class="titel">
+          <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1021290154004830149/original/713daa66-12f5-45b1-92a4-5344afe2441a.jpeg" width="400" height="400" alt="Product 2">
+          <div>
+                <h2>Комфорт</h2>
+                <span>Отвественный сотрутдник: Тайто Кубо </span>
+                <span>Описание:
+                      Расположена в 1 минуте ходьбы от станции Акасака на линии Тиёда и в 5 минутах ходьбы от линии Маруноути и линии Гиндза. Удобный доступ к Синдзюку, Сибуя, Роппонги, Гиндза и т.д.
+                      Бесплатный завтрак.</span>
+                <span>Стоимость за сутки: 5100 &#x20bd;</span>
+                <div id="mess_send" class="btn">Посмотреть</div>
+          </div>
+        </div>
+        <div class="titel">
+          <img src="https://a0.muscache.com/im/pictures/miso/Hosting-50473810/original/23d4998d-caac-4ac9-9c28-7f09d09b0a12.jpeg?im_w=1200" width="400" height="400" alt="Product 3">
+          <div>
+                <h2>Стандартный номер</h2>
+                <span>Отвественный сотрутдник: Исуна Хасэкура </span>
+                <span>Описание:
+                 		Примерно в 3 минутах ходьбы от «Хондзё-Адзумабаси» на линии Тоэй Асакуса и примерно в 8 минутах ходьбы от станции Ято-Киото.Он также удобно доступен из аэропорта Нарита и аэропорта Ханеда.
+                      Бесплатный завтрак.</span>
+                <span>Стоимость за сутки: 3100 &#x20bd;</span>
+                <div id="mess_send" class="btn">Посмотреть</div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      function slowScroll(id) {
+        $('html, body').animate({
+          scrollTop: $(id).offset().top
+        }, 500);
+      }
+
+      $(document).on("scroll", function () {
+        if($(window).scrollTop() === 0)
+          $("header").removeClass("fixed");
+        else
+          $("header").attr("class", "fixed");
+      });
+    </script>
+</body>
+</html>
